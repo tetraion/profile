@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%
+}
+body {
+    color: #383e45;
+    font-size: 0.9rem;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+}
+.site-title {
+    width: 120px;
+    line-height: 1px;
+    padding: 10px 0;
+}
+.site-title a {
+    display: block;
+}
+.section-title {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+}
+.content-title {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+#header ul {
+    display: flex;
+    padding: 10px 0;
+}
+#header li {
+    margin-left: 30px;
+}
+#header li a {
+    color: #24292e;
+}
+#header li a:hover {
+    opacity: 0.7;
+}
+#mainvisual {
+    margin-bottom: 80px;
+}
+#mainvisual img {
+    width: 100%;
+    max-width: 1920px;
+    height: calc(100vh - 60px);
+    object-fit: cover;
+}
+
+#about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+#about .text {
+    text-align: left;
+}
+#skill .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#skill img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+#skill .text {
+    text-align: left;
+}
+#bicycle ul {
+    display: flex;
+    justify-content: space-between;
+}
+#bicycle li {
+    width: 23%;
+}
+
+#footer {
+    font-size: 0.5rem;
+    padding: 10px 0;
+    text-align: center;
+}
+
+  @media screen and (max-width: 600px) {
+
+    /*-------------------------------------------
+    Mainvisual
+    -------------------------------------------*/
+    #mainvisual img {
+      height: calc(100vh - 60px);
+    }
+  
+    /*-------------------------------------------
+    About
+    -------------------------------------------*/
+    #about .content {
+      flex-direction: column;
+    }
+    #about img {
+      margin-right: 0;
+    }
+
+        /*-------------------------------------------
+    Skill
+    -------------------------------------------*/
+    #skill .content {
+        flex-direction: column;
+      }
+      #skill img {
+        margin-right: 0;
+      }
+  
+    /*-------------------------------------------
+    Bicycle
+    -------------------------------------------*/
+    #bicycle ul {
+      flex-direction: column;
+    }
+    #bicycle li {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+     margin:0 auto;
+ }
+ 
+ .slider img {
+     width:100%;/*スライダー内の画像を横幅100%に*/
+     height:auto;
+ }
+ 
+ /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+ 
+ .slider .slick-slide {
+     margin:0 10px;
+ }
+ 
+ /*矢印の設定*/
+ 
+ /*戻る、次へ矢印の位置*/
+ .slick-prev, 
+ .slick-next {
+     position: absolute;/*絶対配置にする*/
+     top: 42%;
+     cursor: pointer;/*マウスカーソルを指マークに*/
+     outline: none;/*クリックをしたら出てくる枠線を消す*/
+     border-top: 2px solid #666;/*矢印の色*/
+     border-right: 2px solid #666;/*矢印の色*/
+     height: 15px;
+     width: 15px;
+ }
+ 
+ .slick-prev {/*戻る矢印の位置と形状*/
+     left: -1.5%;
+     transform: rotate(-135deg);
+ }
+ 
+ .slick-next {/*次へ矢印の位置と形状*/
+     right: -1.5%;
+     transform: rotate(45deg);
+ }
+ 
+ /*ドットナビゲーションの設定*/
+ 
+ .slick-dots {
+     text-align:center;
+     margin:20px 0 0 0;
+ }
+ 
+ .slick-dots li {
+     display:inline-block;
+     margin:0 5px;
+ }
+ 
+ .slick-dots button {
+     color: transparent;
+     outline: none;
+     width:8px;/*ドットボタンのサイズ*/
+     height:8px;/*ドットボタンのサイズ*/
+     display:block;
+     border-radius:50%;
+     background:#ccc;/*ドットボタンの色*/
+ }
+ 
+ .slick-dots .slick-active button{
+     background:#333;/*ドットボタンの現在地表示の色*/
+ }
